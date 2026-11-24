@@ -1,0 +1,508 @@
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f4f1eb;
+    --surface: #fffefa;
+    --surface-alt: #f8f6f0;
+
+    --text: #414740;
+    --muted: #85877f;
+
+    --sage: #a9b9a5;
+    --sage-dark: #70836f;
+
+    --rose: #d8aaa2;
+    --lilac: #c6b8d5;
+    --peach: #e8c8b2;
+    --yellow: #e6d69e;
+
+    --border: #e9e4da;
+
+    --shadow: 0 20px 60px rgba(75, 72, 60, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    padding: 55px 20px;
+
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(216, 170, 162, 0.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(169, 185, 165, 0.25),
+            transparent 35%
+        ),
+        var(--background);
+}
+
+/* =================================
+   CONTAINER PRINCIPAL
+================================= */
+
+.container {
+    width: 100%;
+    max-width: 540px;
+
+    margin: 0 auto;
+    padding: 48px 42px 28px;
+
+    background: rgba(255, 254, 250, 0.94);
+
+    border: 1px solid rgba(233, 228, 218, 0.9);
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+.profile-header {
+    text-align: center;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto 23px;
+
+    display: grid;
+    place-items: center;
+
+    position: relative;
+
+    background: linear-gradient(
+        135deg,
+        #dfe8dc,
+        #f0d9d5
+    );
+
+    border: 5px solid var(--surface);
+    outline: 1px solid var(--border);
+
+    border-radius: 50%;
+}
+
+.avatar span {
+    font-family: "Playfair Display", serif;
+    font-size: 46px;
+    color: var(--sage-dark);
+}
+
+.avatar-decoration {
+    position: absolute;
+    right: -5px;
+    bottom: 3px;
+
+    width: 27px;
+    height: 27px;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--rose);
+    background: var(--surface);
+
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.eyebrow {
+    margin-bottom: 9px;
+
+    color: #a18e83;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 43px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+h1 span {
+    color: var(--rose);
+}
+
+.subtitle {
+    max-width: 365px;
+
+    margin: 13px auto 18px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    color: var(--sage-dark);
+    background: #edf2e9;
+
+    border: 1px solid #dce7d8;
+    border-radius: 30px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    background: #91ad8a;
+    border-radius: 50%;
+}
+
+/* =================================
+   LINKS
+================================= */
+
+.links {
+    display: grid;
+    gap: 12px;
+
+    margin-top: 36px;
+}
+
+.link-card {
+    min-height: 57px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 19px;
+
+    text-decoration: none;
+    color: var(--text);
+
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(70, 70, 60, 0.08);
+}
+
+.link-card:focus-visible,
+.back-top:focus-visible {
+    outline: 3px solid var(--sage);
+    outline-offset: 4px;
+}
+
+.link-icon {
+    font-size: 19px;
+}
+
+.arrow {
+    margin-left: auto;
+    opacity: 0.65;
+    font-size: 16px;
+}
+
+.primary {
+    background: #f8eeeb;
+    border-color: #ead4ce;
+    color: #98736d;
+}
+
+.secondary {
+    background: #edf2ea;
+    border-color: #d5e0d2;
+    color: #718570;
+}
+
+.lilac {
+    background: #f1edf5;
+    border-color: #dfd5e9;
+    color: #897b9b;
+}
+
+.peach {
+    background: #f8eee7;
+    border-color: #ead8c9;
+    color: #9b7d6b;
+}
+
+.yellow {
+    background: #f7f3e5;
+    border-color: #e9dfbd;
+    color: #948354;
+}
+
+/* =================================
+   SOBRE MIM
+================================= */
+
+.about {
+    margin-top: 39px;
+    padding: 27px 24px;
+
+    background: var(--surface-alt);
+
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.section-number {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #a58e82;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin-bottom: 19px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.section-heading h2 span {
+    color: var(--rose);
+}
+
+.about p {
+    margin-bottom: 13px;
+
+    color: #737970;
+
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.back-top {
+    display: inline-block;
+    margin-top: 8px;
+
+    color: var(--sage-dark);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.back-top:hover {
+    color: var(--rose);
+}
+
+/* =================================
+   RODAPÉ
+================================= */
+
+.footer {
+    position: relative;
+    text-align: center;
+
+    padding-top: 28px;
+
+    color: #aaa69c;
+    font-size: 10px;
+    line-height: 1.9;
+}
+
+.footer strong {
+    color: #8b9385;
+}
+
+.footer-decoration {
+    margin-top: 5px;
+    color: var(--rose);
+    font-size: 17px;
+}
+
+/* =================================
+   ANIMAÇÕES
+================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 13px;
+    }
+
+    .container {
+        padding: 37px 22px 24px;
+        border-radius: 19px;
+    }
+
+    .avatar {
+        width: 88px;
+        height: 88px;
+    }
+
+    .avatar span {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 37px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .link-card {
+        min-height: 54px;
+        font-size: 12px;
+    }
+
+    .about {
+        padding: 23px 19px;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+}
+
+/* Respeita quem prefere menos animações */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+/* =================================
+   PÁGINA DE PROJETOS
+================================= */
+
+.project-list {
+    display: grid;
+    gap: 15px;
+    margin-top: 24px;
+}
+
+.project-card {
+    padding: 23px;
+
+    background: #f8f6f0;
+
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sage);
+
+    border-radius: 13px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(70, 70, 60, 0.07);
+}
+
+.project-tag {
+    color: #a18c80;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.project-card h2 {
+    margin: 12px 0 9px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.project-tech {
+    display: inline-block;
+    margin-top: 15px;
+
+    color: var(--sage-dark);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.return-link {
+    margin-top: 25px;
+}
